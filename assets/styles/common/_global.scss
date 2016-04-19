@@ -1,1 +1,34 @@
+@font-face {
+	font-family: 'Intro Rust Book Base G';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/introrustbook-baseg-webfont.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Typewriter Hand';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../fonts/Typewriterhand.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Typewriter Keys';
+	font-style: normal;
+	font-weight: 800;
+	src: url(../fonts/TypewriterKeys.ttf) format('truetype');
+}
+
+ body {
+ 	background: #232324;
+
+ 	h1, h2, h3, h4, h5, h6 {
+ 			color: $primary-color;
+ 			font-family: $font-stack;
+ 		}
+ 	p {
+ 			color: #EAE5E5;
+ 		}
+ 	}
+
 
