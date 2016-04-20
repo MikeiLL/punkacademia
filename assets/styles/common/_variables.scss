@@ -58,11 +58,11 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-stack:    'Typewriter Keys', Helvetica, sans-serif;
+$font-stack:    'Intro Head G Base', Helvetica, sans-serif;
 $font-stack-two: 'Intro Rust Book Base G', monospace;
 
 $font-family-sans-serif:  'Typewriter Hand', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       'Typewriter Keys', Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:       'Intro Head G Base', Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
