@@ -284,7 +284,7 @@ use Roots\Sage\Extras;
 		// $theme_page = add_theme_page( __( 'Theme Options', 'punkacademia' ), __( 'Theme Options', 'punkacademia' ), 'edit_theme_options', 'events_options', 'punkacademia_events_theme_options_render_page' );
 
 		// $theme_page = add_menu_page( __( 'Theme Options', 'punkacademia' ), __( 'Theme Options', 'punkacademia' ), 'edit_theme_options', 'events_options', 'punkacademia_events_theme_options_render_page' );
-		$theme_page = add_submenu_page( 'edit.php?post_type=keel-events', __( 'Options', 'punkacademia' ), __( 'Options', 'punkacademia' ), 'edit_theme_options', 'events_options', __NAMESPACE__ . '\\punkacademia_events_theme_options_render_page' );
+		$theme_page = add_submenu_page( 'edit.php?post_type=punkacademia-events', __( 'Options', 'punkacademia' ), __( 'Options', 'punkacademia' ), 'edit_theme_options', 'events_options', __NAMESPACE__ . '\\punkacademia_events_theme_options_render_page' );
 	}
 	add_action( 'admin_menu', __NAMESPACE__ . '\\punkacademia_events_theme_options_add_page' );
 

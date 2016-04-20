@@ -104,8 +104,6 @@ use DateTimeZone;
 		);
 	}
 
-
-
 	/**
 	 * Render the metabox
 	 */
@@ -115,7 +113,7 @@ use DateTimeZone;
 		global $post;
 		$options = EventsOptions\punkacademia_events_get_theme_options(); // Events options
 		$saved = get_post_meta( $post->ID, 'punkacademia_events_details', true );
-		$defaults = __NAMESPACE__ . punkacademia_events_metabox_defaults();
+		$defaults = punkacademia_events_metabox_defaults();
 		$details = wp_parse_args( $saved, $defaults );
 		$start_date = get_post_meta( $post->ID, 'punkacademia_events_start_date', true );
 		$end_date = get_post_meta( $post->ID, 'punkacademia_events_end_date', true );
@@ -372,7 +370,7 @@ use DateTimeZone;
 			}
 
 			if ( !empty( $event_details ) && is_array( $event_details ) ) {
-				$event_defaults = __NAMESPACE__ . punkacademia_events_metabox_defaults();
+				$event_defaults = punkacademia_events_metabox_defaults();
 				foreach ( $event_defaults as $key => $value ) {
 					if ( array_key_exists( $key, $event_details ) ) {
 						add_metadata( 'post', $post_id, 'punkacademia_events_details_' . $key, $event_details[$key] );
@@ -399,7 +397,7 @@ use DateTimeZone;
 		$revision = get_post( $revision_id );
 		$event_start_date = get_metadata( 'post', $revision->ID, 'punkacademia_events_start_date', true );
 		$event_end_date = get_metadata( 'post', $revision->ID, 'punkacademia_events_end_date', true );
-		$event_defaults = __NAMESPACE__ . punkacademia_events_metabox_defaults();
+		$event_defaults = punkacademia_events_metabox_defaults();
 		$event_details = array();
 
 		// Update content
@@ -428,7 +426,7 @@ use DateTimeZone;
 	 * @return Array The fields
 	 */
 	function punkacademia_events_get_revisions_fields( $fields ) {
-		$event_defaults = __NAMESPACE__ . punkacademia_events_metabox_defaults();
+		$event_defaults = punkacademia_events_metabox_defaults();
 		$fields['punkacademia_events_start_date'] = 'Event Start Date';
 		$fields['punkacademia_events_end_date'] = 'Event End Date';
 		foreach ( $event_defaults as $key => $value ) {
@@ -473,12 +471,11 @@ use DateTimeZone;
 	 * @param Array $query The database query
 	 */
 	function punkacademia_events_filter_query( $query ) {
-mz_pr($query->query['post_type']);
+
 		if ( is_admin() || !isset( $query->query['post_type'] ) || $query->query['post_type'] !== 'punkacademia-events' || !isset( $query->query['date'] )  || !$query->is_main_query() ) return $query;
 		//Get original meta query
 		$meta_query = $query->get('meta_query');
 
-mz_pr($meta_query);
 		// if filtering by past events
 		if ( $query->query['date'] === 'past' ) {
 			//Add our meta query to the original meta queries
@@ -585,7 +582,7 @@ mz_pr($meta_query);
 
 		// Variables
 		$date = get_query_var( 'date' );
-		$options = Roots\Sage\Events\Optionz\punkacademia_events_get_theme_options();
+		$options = EventsOptions\punkacademia_events_get_theme_options();
 
 		// If date specified, don't redirect
 		if ( !empty( $date ) ) return;
@@ -644,9 +641,9 @@ mz_pr($meta_query);
 	 * @return string          Calendar format timestamp
 	 */
 	function punkacademia_events_string_to_calendar( $day, $hour, $minutes, $ampm, $timezone, $offset = 0 ) {
-		$timestamp = __NAMESPACE__ . punkacademia_events_strings_to_timestamp( $day, $hour, $minutes, $ampm, $timezone );
+		$timestamp = punkacademia_events_strings_to_timestamp( $day, $hour, $minutes, $ampm, $timezone );
 		$timestamp = $timestamp + $offset;
-		return __NAMESPACE__ . punkacademia_events_timestamp_to_calendar( $timestamp );
+		return punkacademia_events_timestamp_to_calendar( $timestamp );
 	}
 
 
