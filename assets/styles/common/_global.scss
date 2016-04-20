@@ -25,10 +25,18 @@
  	h1, h2, h3, h4, h5, h6 {
  			color: $primary-color;
  			font-family: $font-stack;
+ 			font-size: 3.2rem;
+      letter-spacing: 0.4rem;
+      word-spacing: 1rem;
  		}
  	p {
  			color: #EAE5E5;
  		}
  	}
+
+ 	h1, h2 {
+      letter-spacing: 0.4rem;
+      word-spacing: 1rem;
+      }
 
 

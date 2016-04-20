@@ -473,9 +473,8 @@ use DateTimeZone;
 	 * @param Array $query The database query
 	 */
 	function punkacademia_events_filter_query( $query ) {
-mz_pr($query);
+mz_pr($query->query['post_type']);
 		if ( is_admin() || !isset( $query->query['post_type'] ) || $query->query['post_type'] !== 'punkacademia-events' || !isset( $query->query['date'] )  || !$query->is_main_query() ) return $query;
-mz_pr("hi");
 		//Get original meta query
 		$meta_query = $query->get('meta_query');
 
