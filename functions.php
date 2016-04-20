@@ -18,7 +18,9 @@ $sage_includes = [
   'lib/customizer.php', // Theme customizer
   'lib/wp_bootstrap_navwalker.php', // Bootstrap Navwalker
   'lib/events/events.php', // Events Display page
-  'lib/events/events-options.php' // Events Options Admin page
+  'lib/events/events-options.php', // Events Options Admin page
+  'lib/classes/classes.php', // Classes Display page
+  'lib/classes/classes-options.php' // Classes Options Admin page
 ];
 
 foreach ($sage_includes as $file) {
