@@ -19,6 +19,13 @@
 	src: url(../fonts/TypewriterKeys.ttf) format('truetype');
 }
 
+@font-face {
+	font-family: 'Intro Rust Two Base';
+	font-style: normal;
+	font-weight: 800;
+	src: url(../fonts/introrustbook-baseh2-webfont.ttf) format('truetype');
+}
+
  body {
  	background: #232324;
 
@@ -38,5 +45,6 @@
       letter-spacing: 0.4rem;
       word-spacing: 1rem;
       }
+
 
 
