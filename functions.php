@@ -19,8 +19,8 @@ $sage_includes = [
   'lib/wp_bootstrap_navwalker.php', // Bootstrap Navwalker
   'lib/events/events.php', // Events Display page
   'lib/events/events-options.php', // Events Options Admin page
-  'lib/classes/classes.php', // Classes Display page
-  'lib/classes/classes-options.php' // Classes Options Admin page
+  'lib/resources/resources.php', // Resources Display page
+  'lib/resources/resources-options.php' // Resources Options Admin page
 ];
 
 foreach ($sage_includes as $file) {

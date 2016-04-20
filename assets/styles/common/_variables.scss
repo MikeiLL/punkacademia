@@ -9,8 +9,6 @@ $sidebar-sm-columns:    4;
 $brand-primary:         #27ae60;
 
 // Colors
-$font-stack:    'Typewriter Keys', Helvetica, sans-serif;
-$font-stack-two: 'Intro Rust Book Base G', monospace;
 $primary-color: #F0F0F5; // #FDE3E3;
 $main-bg-color: #232324; // #371C1C
 $brand-primary: #DDDDDD; // links
@@ -60,10 +58,13 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
+$font-stack:    'Typewriter Keys', Helvetica, sans-serif;
+$font-stack-two: 'Intro Rust Book Base G', monospace;
+
 $font-family-sans-serif:  'Typewriter Hand', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       'Typewriter Keys', Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:   'Intro Rust Book Base G', Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
