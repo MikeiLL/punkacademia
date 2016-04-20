@@ -4,6 +4,8 @@ namespace Roots\Sage\Events;
 
 use Roots\Sage\Extras;
 use Roots\Sage\EventsOptions;
+use DateTimeZone;
+
 /**
  * Add an events custom post type
  */
@@ -471,12 +473,13 @@ use Roots\Sage\EventsOptions;
 	 * @param Array $query The database query
 	 */
 	function punkacademia_events_filter_query( $query ) {
-
+mz_pr($query);
 		if ( is_admin() || !isset( $query->query['post_type'] ) || $query->query['post_type'] !== 'punkacademia-events' || !isset( $query->query['date'] )  || !$query->is_main_query() ) return $query;
-
+mz_pr("hi");
 		//Get original meta query
 		$meta_query = $query->get('meta_query');
 
+mz_pr($meta_query);
 		// if filtering by past events
 		if ( $query->query['date'] === 'past' ) {
 			//Add our meta query to the original meta queries
