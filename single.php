@@ -5,7 +5,7 @@
  * Template for individual blog posts.
  */
 
-get_header(); ?>
+?>
 
 
 <?php if (have_posts()) : ?>
@@ -28,4 +28,3 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php get_footer(); ?>
