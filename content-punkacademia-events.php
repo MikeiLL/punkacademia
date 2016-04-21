@@ -39,7 +39,7 @@ use Roots\Sage\Extras;
 		$details['location_country'];
 	$calendar_timezone = ( empty( $details['date_timezone'] ) ? get_option('timezone_string') : $details['date_timezone'] );
 	$calendar_timestamp_start = Events\punkacademia_events_string_to_calendar( $start_date, $details['time_start_hour'], $details['time_start_minutes'], $details['time_start_ampm'], $calendar_timezone );
-	$calendar_timestamp_end = ( $has_end_date && $has_end_time ? Events\punkacademia_events_string_to_calendar( $end_date, $details['time_end_hour'], $details['time_end_minutes'], $details['time_end_ampm'], $calendar_timezone ) : punkacademia_events_string_to_calendar( $start_date, $details['time_start_hour'], $details['time_start_minutes'], $details['time_start_ampm'], $calendar_timezone, 3600 ) );
+	$calendar_timestamp_end = ( $has_end_date && $has_end_time ? Events\punkacademia_events_string_to_calendar( $end_date, $details['time_end_hour'], $details['time_end_minutes'], $details['time_end_ampm'], $calendar_timezone ) : Events\punkacademia_events_string_to_calendar( $start_date, $details['time_start_hour'], $details['time_start_minutes'], $details['time_start_ampm'], $calendar_timezone, 3600 ) );
 	$calendar_location =
 		( empty( $details['location_address'] ) && !empty( $details['location_venue'] ) ? $details['location_venue'] . ', ' : '' ) .
 		( !empty( $details['location_address'] ) ? $details['location_address'] . ', ' : '' ).
