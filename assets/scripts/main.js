@@ -74,4 +74,7 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  $("#share").jsSocials({
+            shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest"]
+  });
 })(jQuery); // Fully reference jQuery after this point.
