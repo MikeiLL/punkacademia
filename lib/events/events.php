@@ -10,7 +10,6 @@ use DateTimeZone;
  * Add an events custom post type
  */
 
-
 	// Load required files
 	require_once( dirname( __FILE__) . '/events-options.php' );
 
